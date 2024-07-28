@@ -1,0 +1,184 @@
+@use './partials/variables' as *;
+@use './partials/typography' as *;
+
+.header {
+    background-color: $BandSite-Black;
+    height: 5.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    &__logo {
+        padding-top: 3rem;
+        padding-bottom: 2.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.25rem;
+        width: 7.5rem;
+    }
+}
+
+.nav {
+    background-color: $BandSite-Black;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.25rem;
+    
+    &__anchor1 {
+        font-family: 'AvenirNext LT Pro';
+        font-weight: 700;
+        font-size: .625rem;
+        text-align: center;
+        width: 50%;
+        color: $White;
+        text-decoration: none;
+
+        &:active{
+            border-bottom: .1875rem solid $White;
+        }
+
+        &:hover {
+            border-bottom: .1875rem solid $White;
+        }
+
+    }
+
+    &__anchor2 {
+        font-family: 'AvenirNext LT Pro';
+        font-weight: 700;
+        font-size: .625rem;
+        text-align: center;
+        width: 50%;
+        color: $White;
+        text-decoration: none;
+
+
+        &:active{
+            border-bottom: .1875rem solid $White;
+        }
+
+        &:hover {
+            border-bottom: .1875rem solid $White;
+        }
+
+    }
+}
+
+.hero {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $BandSite-Black;
+        opacity: 50%;
+        display: flex;
+        align-items: center;
+        
+        
+    }
+
+    &__title {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        color: $White;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        margin-left: 1rem;
+        
+    }
+}
+
+.intro {
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    &__paragraph {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1.375rem;
+    }
+}
+
+.about {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1.375rem;
+    }
+
+    &__paragraph {
+        // margin-left: 1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: .8125rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+
+    }
+
+    &__text {
+        // margin-left: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: .8125rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+    }
+}
+
+.gallery {
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        // margin-bottom: 1rem;
+    }
+}
