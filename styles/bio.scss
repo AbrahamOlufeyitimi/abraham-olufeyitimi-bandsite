@@ -3,15 +3,14 @@
 
 .header {
     background-color: $BandSite-Black;
-    height: 5.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     
     
     &__logo {
-        padding-top: 3rem;
-        padding-bottom: 2.25rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,39 +28,45 @@
     
     &__anchor1 {
         font-family: 'AvenirNext LT Pro';
-        font-weight: 700;
+        font-weight: 400;
         font-size: .625rem;
         text-align: center;
         width: 50%;
-        color: $White;
+        color: $Mercury;
         text-decoration: none;
 
         &:active{
             border-bottom: .1875rem solid $White;
+            color: $White;
+            font-weight: 700;
         }
 
         &:hover {
             border-bottom: .1875rem solid $White;
+            color: $White;
         }
 
     }
 
     &__anchor2 {
         font-family: 'AvenirNext LT Pro';
-        font-weight: 700;
+        font-weight: 400;
         font-size: .625rem;
         text-align: center;
         width: 50%;
-        color: $White;
+        color: $Mercury;
         text-decoration: none;
 
 
         &:active{
             border-bottom: .1875rem solid $White;
+            color: $White;
+            font-weight: 700;
         }
 
         &:hover {
             border-bottom: .1875rem solid $White;
+            color: $White;
         }
 
     }
@@ -107,6 +112,7 @@
 .intro {
     margin-left: 1rem;
     margin-bottom: 1.5rem;
+    margin-right: 1rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -120,6 +126,7 @@
         width: 100%;
         height: auto;
         margin-bottom: 1rem;
+        margin-right: 1rem;
     }
 
     &__paragraph {
@@ -133,6 +140,7 @@
 
 .about {
     margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
     flex-direction: column;
 
@@ -145,7 +153,6 @@
     }
 
     &__paragraph {
-        // margin-left: 1rem;
         margin-top: 0;
         margin-bottom: 1rem;
         font-size: .8125rem;
@@ -155,7 +162,6 @@
     }
 
     &__text {
-        // margin-left: 1rem;
         margin-top: 0;
         margin-bottom: 0;
         font-size: .8125rem;
@@ -167,18 +173,89 @@
 .gallery {
     margin-left: 1rem;
     margin-top: 1.5rem;
+    padding-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    flex-wrap: wrap;
 
     &__title {
         margin-top: 0;
         margin-bottom: 1rem;
     }
 
+    &__container {
+        padding-bottom: 1rem;
+    }
+
     &__image {
         width: 100%;
         height: auto;
-        // margin-bottom: 1rem;
+    }
+}
+
+
+.footer {
+    background-color: $BandSite-Black;
+
+    &__title {
+        color: $White;
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    &__images {
+        padding-left: 1rem;
+        padding-top: 0;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__subheader {
+        color: $White;
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1.375rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__address {
+        font-size: .8125rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        font-weight: 400;
+        color: $White;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+
+    }
+
+    &__email {
+        @extend .footer__address;
+        padding-top: 0;
+    }
+
+    &__booking {
+        @extend .footer__email;
+    }
+
+    &__logo {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        height: 1.25rem;
+        width: 7.5rem;
+    }
+
+    &__copyright {
+        padding-left: 1rem;
+        padding-top: 0;
+        padding-bottom: 1rem;
+        color: $White;
+        font-size: .8125rem;
+        font-weight: 400;
+        line-height: 1.125rem;
     }
 }
