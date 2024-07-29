@@ -40,6 +40,7 @@ html {
     background-color: $BandSite-Black;
     height: 2rem;
     display: flex;
+    justify-content: space-evenly;  //
 
     @include tablet {
         padding-left: 2.25rem;
@@ -62,6 +63,11 @@ html {
 
         @include tablet {
             width: auto;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            align-items: center;
         }
 
         &:active {
@@ -91,6 +97,11 @@ html {
 
         @include tablet {
             width: auto;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            align-items: center;
         }
 
         &:active {

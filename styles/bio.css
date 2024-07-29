@@ -56,6 +56,7 @@ html {
   background-color: #323232;
   height: 2rem;
   display: flex;
+  justify-content: space-evenly;
   justify-content: space-between;
   line-height: 1.25rem;
 }
@@ -79,6 +80,11 @@ html {
 @media screen and (min-width: 768px) {
   .nav__anchor1 {
     width: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    align-items: center;
   }
 }
 .nav__anchor1:active {
@@ -107,6 +113,11 @@ html {
 @media screen and (min-width: 768px) {
   .nav__anchor2 {
     width: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    align-items: center;
   }
 }
 .nav__anchor2:active {
