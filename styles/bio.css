@@ -1,15 +1,41 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("woff");
+  src: url("../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("woff");
+  src: url("../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("woff");
+  src: url("../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
+body,
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+  font-family: "AvenirNext LT Pro";
+  background-color: #FAFAFA;
+}
+
+@media screen and (min-width: 768px) {
+  .top {
+    background-color: #323232;
+    display: flex;
+    padding-left: 2.25rem;
+    padding-right: 2.5rem;
+  }
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -33,6 +59,14 @@
   justify-content: space-between;
   line-height: 1.25rem;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    padding-left: 2.25rem;
+    padding-top: 1.25rem;
+    width: 25%;
+    align-items: flex-end;
+  }
+}
 .nav__anchor1 {
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
@@ -41,6 +75,11 @@
   width: 50%;
   color: #E1E1E1;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__anchor1 {
+    width: auto;
+  }
 }
 .nav__anchor1:active {
   border-bottom: 0.1875rem solid #FFFFFF;
@@ -51,6 +90,11 @@
   border-bottom: 0.1875rem solid #FFFFFF;
   color: #FFFFFF;
 }
+@media screen and (min-width: 768px) {
+  .nav__anchor1:hover {
+    margin-bottom: 0.625rem;
+  }
+}
 .nav__anchor2 {
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
@@ -59,6 +103,11 @@
   width: 50%;
   color: #E1E1E1;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__anchor2 {
+    width: auto;
+  }
 }
 .nav__anchor2:active {
   border-bottom: 0.1875rem solid #FFFFFF;
@@ -84,11 +133,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 98%;
   background-color: #323232;
   opacity: 50%;
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__div {
+    height: 99%;
+  }
 }
 .hero__title {
   position: absolute;
@@ -100,6 +154,37 @@
   font-weight: 700;
   margin-left: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    margin-left: 2.25rem;
+  }
+}
+
+.first-block {
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .first-block {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+.intro__title {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .intro__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    margin-left: -2rem;
+  }
+}
 
 .intro {
   margin-left: 1rem;
@@ -109,13 +194,15 @@
   display: flex;
   flex-direction: column;
 }
-.intro__title {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+@media screen and (min-width: 768px) {
+  .intro {
+    margin: 0;
+    padding: 0;
+  }
 }
 .intro__image {
   width: 100%;
-  height: auto;
+  height: 49vw;
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
@@ -126,6 +213,24 @@
   font-weight: 600;
   line-height: 1.375rem;
 }
+@media screen and (min-width: 768px) {
+  .intro__paragraph {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.375rem;
+  }
+}
+.intro__paragraph-one {
+  font-weight: 600;
+  font-size: 0.8125rem;
+}
+@media screen and (min-width: 768px) {
+  .intro__paragraph-one {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.375rem;
+  }
+}
 
 .about {
   margin-left: 1rem;
@@ -133,12 +238,25 @@
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .about__title {
   margin-top: 0;
+  margin-left: 1rem;
   margin-bottom: 1rem;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  .about__title {
+    margin-top: 3rem;
+  }
 }
 .about__paragraph {
   margin-top: 0;
@@ -155,6 +273,21 @@
   line-height: 1.125rem;
 }
 
+.gallery__title {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    margin-top: 3rem;
+    margin-left: 1.8rem;
+    margin-bottom: 2.25rem;
+    margin-right: 2.25rem;
+  }
+}
+
 .gallery {
   margin-left: 1rem;
   margin-top: 1.5rem;
@@ -162,14 +295,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  flex-wrap: wrap;
 }
-.gallery__title {
-  margin-top: 0;
-  margin-bottom: 1rem;
+@media screen and (min-width: 768px) {
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .gallery__container {
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery__container {
+    width: 30%;
+  }
 }
 .gallery__image {
   width: 100%;
@@ -178,26 +317,77 @@
 
 .footer {
   background-color: #323232;
+  position: relative;
+}
+.footer__block {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.footer__block-two {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__block-two {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+  }
 }
 .footer__title {
   color: #FFFFFF;
   padding-top: 1.5rem;
   padding-left: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    padding-left: 2.25rem;
+    padding-top: 2.25rem;
+    width: 30%;
+  }
+}
 .footer__images {
   padding-left: 1rem;
   padding-top: 0;
+  padding-bottom: 1rem;
   width: 40%;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .footer__images {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    gap: 1.25rem;
+    padding-top: 3rem;
+  }
 }
 .footer__subheader {
   color: #FFFFFF;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.375rem;
+  padding-top: 0;
   padding-left: 1rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__subheader {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 .footer__address, .footer__email, .footer__booking {
   font-size: 0.8125rem;
@@ -205,11 +395,41 @@
   line-height: 1.125rem;
   font-weight: 400;
   color: #FFFFFF;
+  padding-top: 0;
   padding-left: 1rem;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__address, .footer__email, .footer__booking {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
 .footer__email, .footer__booking {
   padding-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__email, .footer__booking {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__booking {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+.footer__logo-container {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo-container {
+    display: flex;
+    position: absolute;
+    top: 3rem;
+    right: 2.25rem;
+  }
 }
 .footer__logo {
   padding-top: 1.5rem;
@@ -226,4 +446,16 @@
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    padding-left: 3rem;
+    padding-bottom: 2.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+.footer__info-one, .footer__info-three, .footer__info-two {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=bio.css.map */

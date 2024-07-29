@@ -1,13 +1,30 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
+@use './partials/mixins' as *;
+
+body,
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: 'AvenirNext LT Pro';
+    background-color: $Alabaster;
+}
+
+.top {
+    @include tablet {
+        background-color: $BandSite-Black;
+        display: flex;
+        padding-left: 2.25rem;
+        padding-right: 2.5rem;
+    }
+}
 
 .header {
     background-color: $BandSite-Black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
+
     &__logo {
         padding-top: 1.5rem;
         padding-bottom: 1rem;
@@ -23,9 +40,17 @@
     background-color: $BandSite-Black;
     height: 2rem;
     display: flex;
+
+    @include tablet {
+        padding-left: 2.25rem;
+        padding-top: 1.25rem;
+        width: 25%;
+        align-items: flex-end;
+    }
+
     justify-content: space-between;
     line-height: 1.25rem;
-    
+
     &__anchor1 {
         font-family: 'AvenirNext LT Pro';
         font-weight: 400;
@@ -35,7 +60,11 @@
         color: $Mercury;
         text-decoration: none;
 
-        &:active{
+        @include tablet {
+            width: auto;
+        }
+
+        &:active {
             border-bottom: .1875rem solid $White;
             color: $White;
             font-weight: 700;
@@ -44,8 +73,11 @@
         &:hover {
             border-bottom: .1875rem solid $White;
             color: $White;
-        }
 
+            @include tablet {
+                margin-bottom: .625rem;
+            }
+        }
     }
 
     &__anchor2 {
@@ -57,8 +89,11 @@
         color: $Mercury;
         text-decoration: none;
 
+        @include tablet {
+            width: auto;
+        }
 
-        &:active{
+        &:active {
             border-bottom: .1875rem solid $White;
             color: $White;
             font-weight: 700;
@@ -68,7 +103,6 @@
             border-bottom: .1875rem solid $White;
             color: $White;
         }
-
     }
 }
 
@@ -87,13 +121,15 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 98%;
         background-color: $BandSite-Black;
         opacity: 50%;
         display: flex;
         align-items: center;
-        
-        
+
+        @include tablet {
+            height: 99%;
+        }
     }
 
     &__title {
@@ -105,7 +141,34 @@
         line-height: 2rem;
         font-weight: 700;
         margin-left: 1rem;
-        
+
+        @include tablet {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+            font-weight: 700;
+            margin-left: 2.25rem;
+        }
+    }
+}
+
+.first-block {
+    background-color: $White;
+
+    @include tablet {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+}
+
+.intro__title {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-weight: 700;
+        margin-left: -2rem;
     }
 }
 
@@ -117,14 +180,14 @@
     display: flex;
     flex-direction: column;
 
-    &__title {
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
+    @include tablet {
+        margin: 0;
+        padding: 0;
     }
 
     &__image {
         width: 100%;
-        height: auto;
+        height: 49vw;
         margin-bottom: 1rem;
         margin-right: 1rem;
     }
@@ -135,6 +198,23 @@
         font-size: .875rem;
         font-weight: 600;
         line-height: 1.375rem;
+
+        @include tablet {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.375rem;
+        }
+    }
+
+    &__paragraph-one {
+        font-weight: 600;
+        font-size: .8125rem;
+
+        @include tablet {
+            font-size: .875rem;
+            font-weight: 600;
+            line-height: 1.375rem;
+        }
     }
 }
 
@@ -144,12 +224,23 @@
     display: flex;
     flex-direction: column;
 
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     &__title {
         margin-top: 0;
+        margin-left: 1rem;
         margin-bottom: 1rem;
         font-size: .875rem;
         font-weight: 600;
         line-height: 1.375rem;
+
+        @include tablet {
+            margin-top: 3rem;
+        }
     }
 
     &__paragraph {
@@ -158,7 +249,6 @@
         font-size: .8125rem;
         font-weight: 400;
         line-height: 1.125rem;
-
     }
 
     &__text {
@@ -170,6 +260,20 @@
     }
 }
 
+.gallery__title {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    padding-right: 1rem;
+
+    @include tablet {
+        margin-top: 3rem;
+        margin-left: 1.8rem;
+        margin-bottom: 2.25rem;
+        margin-right: 2.25rem;
+    }
+}
+
 .gallery {
     margin-left: 1rem;
     margin-top: 1.5rem;
@@ -177,15 +281,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    flex-wrap: wrap;
 
-    &__title {
-        margin-top: 0;
-        margin-bottom: 1rem;
+    @include tablet {
+
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     &__container {
         padding-bottom: 1rem;
+
+        @include tablet {
+            width: 30%;
+        }
     }
 
     &__image {
@@ -197,19 +305,61 @@
 
 .footer {
     background-color: $BandSite-Black;
+    position: relative;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__block-two {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 2.25rem;
+            margin-right: 2.25rem;
+        }
+    }
 
     &__title {
         color: $White;
         padding-top: 1.5rem;
         padding-left: 1rem;
+
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            font-weight: 600;
+            padding-left: 2.25rem;
+            padding-top: 2.25rem;
+            width: 30%;
+        }
     }
 
     &__images {
         padding-left: 1rem;
         padding-top: 0;
+        padding-bottom: 1rem;
         width: 40%;
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            width: 1.25rem;
+            height: 1.25rem;
+            display: flex;
+            gap: 1.25rem;
+            padding-top: 3rem;
+        }
     }
 
     &__subheader {
@@ -217,8 +367,14 @@
         font-size: .875rem;
         font-weight: 600;
         line-height: 1.375rem;
+        padding-top: 0;
         padding-left: 1rem;
         padding-bottom: 1rem;
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
     }
 
     &__address {
@@ -227,18 +383,44 @@
         line-height: 1.125rem;
         font-weight: 400;
         color: $White;
+        padding-top: 0;
         padding-left: 1rem;
         padding-bottom: 1rem;
 
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
     }
 
     &__email {
         @extend .footer__address;
         padding-top: 0;
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
     }
 
     &__booking {
         @extend .footer__email;
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    &__logo-container {
+        display: flex;
+
+        @include tablet {
+            display: flex;
+            position: absolute;
+            top: 3rem;
+            right: 2.25rem;
+        }
     }
 
     &__logo {
@@ -257,5 +439,25 @@
         font-size: .8125rem;
         font-weight: 400;
         line-height: 1.125rem;
+
+        @include tablet {
+            padding-left: 3rem;
+            padding-bottom: 2.25rem;
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    &__info-one {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info-two {
+        @extend .footer__info-one;
+    }
+
+    &__info-three {
+        @extend .footer__info-one;
     }
 }
