@@ -1,1 +1,106 @@
-/*# sourceMappingURL=shows.css.map */
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+}
+.header__logo {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 7.5rem;
+  height: 1.25rem;
+}
+.header__nav {
+  list-style-type: none;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  gap: 3.75rem;
+  justify-content: space-between;
+}
+.header__nav-item {
+  padding-bottom: 1rem;
+}
+.header__nav-item:hover {
+  border-bottom: 0.1875rem solid #FFFFFF;
+  color: #FFFFFF;
+}
+.header__nav-item:active {
+  border-bottom: 0.1875rem solid #FFFFFF;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.hero {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98%;
+  background-color: #323232;
+  opacity: 50%;
+}
+.hero__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero__text {
+  position: absolute;
+  color: #FFFFFF;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+.hero__title {
+  position: absolute;
+  color: #FFFFFF;
+  padding-top: 1.5rem;
+  top: 17%;
+  padding-left: 1.5rem;
+}
+.hero__music {
+  position: absolute;
+  top: 55%;
+  padding-left: 1.5rem;
+  width: 90%;
+  height: 30%;
+}/*# sourceMappingURL=shows.css.map */
