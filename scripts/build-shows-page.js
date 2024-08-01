@@ -16,7 +16,8 @@ const shows = [
 <p>LOCATION</p>
 <p>San Francisco, CA</p>
 
-<button>BUY TICKETS</button> */
+<button>BUY TICKETS</button>
+<hr> */
 
 
 function createShow (show) {
@@ -24,6 +25,11 @@ function createShow (show) {
     //create parent container article and add class= 'show'
     const showBlock = document.createElement('article');
     showBlock.classList.add('show');
+
+    //create parent container div and add class= 'show-div'
+    const showContainerOne = document.createElement('div');
+    showContainerOne.classList.add('show-div');
+
 
     //create label for the date and add class name and also add text 
     const eventDateLabel = document.createElement('p');
@@ -35,6 +41,10 @@ function createShow (show) {
     eventDate.classList.add('scheduled-date');
     eventDate.innerText = show.showDate;
 
+
+    //create parent container div and add class= 'show-div'
+    const showContainerTwo = document.createElement('div');
+    showContainerTwo.classList.add('show-div');
     
     //create label for the venue and add class name and also add text 
     const eventVenueLabel = document.createElement('p');
@@ -47,6 +57,10 @@ function createShow (show) {
     eventVenue.innerText = show.showVenue;
 
 
+    //create parent container div and add class= 'show-div'
+    const showContainerThree = document.createElement('div');
+    showContainerThree.classList.add('show-div');
+
     //create label for the location and add class name and also add text 
     const eventLocationLabel = document.createElement('p');
     eventLocationLabel.classList.add('label');
@@ -57,6 +71,11 @@ function createShow (show) {
     eventLocation.classList.add('scheduled-location');
     eventLocation.innerText = show.showLocation;
 
+
+    //create parent container div and add class= 'show-div'
+    const showContainerFour = document.createElement('div');
+    showContainerFour.classList.add('show-btn');
+
     //create button and add class name
     const showButton = document.createElement('button');
     showButton.classList.add('show-button');
@@ -65,20 +84,27 @@ function createShow (show) {
     //create button and add class name
     const showDivider = document.createElement('hr');
     showDivider.classList.add('solid');
-    // showDivider.innerText = 'BUY TICKETS';
+
+
 
     //place inside article tag
-    showBlock.appendChild(eventDateLabel);
-    showBlock.appendChild(eventDate);
+    showBlock.appendChild(showContainerOne);
+    showContainerOne.appendChild(eventDateLabel);
+    showContainerOne.appendChild(eventDate);
 
-    showBlock.appendChild(eventVenueLabel);
-    showBlock.appendChild(eventVenue);
 
-    showBlock.appendChild(eventLocationLabel);
-    showBlock.appendChild(eventLocation);
+    showBlock.appendChild(showContainerTwo);
+    showContainerTwo.appendChild(eventVenueLabel);
+    showContainerTwo.appendChild(eventVenue);
 
-    showBlock.appendChild(showButton);
-    showBlock.appendChild(showDivider);
+
+    showBlock.appendChild(showContainerThree);
+    showContainerThree.appendChild(eventLocationLabel);
+    showContainerThree.appendChild(eventLocation);
+
+    showBlock.appendChild(showContainerFour)
+    showContainerFour.appendChild(showButton);
+    // showBlock.appendChild(showDivider);
 
     return showBlock
 }
@@ -98,5 +124,7 @@ function renderInfo () {
         showInfo.appendChild(block);
     })
 }
+
+
 
 renderInfo();

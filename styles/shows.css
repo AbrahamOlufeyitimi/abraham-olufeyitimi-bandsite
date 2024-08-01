@@ -29,45 +29,75 @@ body {
 }
 
 .header {
-  background-color: #323232;
   display: flex;
   flex-direction: column;
+  background-color: #323232;
   align-items: center;
-  height: 30%;
 }
 @media screen and (min-width: 768px) {
   .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    height: 3.75rem;
   }
 }
-.header__logo {
+.header__image {
+  display: flex;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  width: 7.5rem;
-  height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .header__image {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2.25rem;
+    padding-top: 0;
+    padding-right: 2.25rem;
+  }
 }
 .header__nav {
   list-style-type: none;
   color: #FFFFFF;
   display: flex;
-  flex-direction: row;
-  gap: 3.75rem;
+  width: 100%;
   justify-content: space-between;
 }
-.header__nav-item {
-  padding-bottom: 1rem;
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    padding-top: 0.3rem;
+  }
 }
-.header__nav-item:hover {
-  border-bottom: 0.1875rem solid #FFFFFF;
+.header__nav-item1 {
+  text-align: center;
+  width: 50%;
+  padding-bottom: 1.4rem;
+  padding-top: 0.69rem;
+  text-decoration: none;
   color: #FFFFFF;
 }
-.header__nav-item:active {
+.header__nav-item1:hover {
   border-bottom: 0.1875rem solid #FFFFFF;
+}
+.header__nav-item1:active {
+  border-bottom: 0.1875rem solid #FFFFFF;
+  font-weight: bold;
+}
+.header__nav-item2 {
+  text-align: center;
+  width: 50%;
+  padding-bottom: 1.4rem;
+  padding-top: 0.69rem;
+  text-decoration: none;
   color: #FFFFFF;
-  font-weight: 700;
+}
+.header__nav-item2:hover {
+  border-bottom: 0.1875rem solid #FFFFFF;
+}
+.header__nav-item2:active {
+  border-bottom: 0.1875rem solid #FFFFFF;
+  font-weight: bold;
 }
 
 .hero {
@@ -102,6 +132,16 @@ body {
   padding-top: 1.5rem;
   padding-left: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__text {
+    top: 15%;
+    padding-top: 3rem;
+    padding-left: 2.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+  }
+}
 .hero__title {
   position: absolute;
   color: #FFFFFF;
@@ -110,6 +150,16 @@ body {
   padding-left: 1.5rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    top: 25%;
+    padding-top: 3rem;
+    padding-left: 2.25rem;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 4.25rem;
+  }
+}
 .hero__music {
   position: absolute;
   top: 55%;
@@ -117,10 +167,23 @@ body {
   width: 90%;
   height: 30%;
 }
+@media screen and (min-width: 768px) {
+  .hero__music {
+    padding-left: 2.25rem;
+    width: 60%;
+    height: 30%;
+  }
+}
 
 .shows__title {
   padding-left: 1rem;
   padding-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .shows__title {
+    padding-top: 3rem;
+    padding-left: 3rem;
+  }
 }
 
 #band-shows {
@@ -129,11 +192,40 @@ body {
   padding-top: 1rem;
 }
 
+.show {
+  border-bottom: 0.0625rem solid #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+}
 .show:hover {
   background-color: #FAFAFA;
 }
 .show:active {
   background-color: #E1E1E1;
+}
+
+@media screen and (min-width: 768px) {
+  .show-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .show-btn {
+    width: 15.625rem;
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 .label {
@@ -144,6 +236,11 @@ body {
   padding-bottom: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .show:not(:first-of-type) .label {
+    display: none;
+  }
+}
 .scheduled-date {
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -286,7 +383,7 @@ body {
   .footer__logo-container {
     display: flex;
     position: absolute;
-    top: 3rem;
+    top: 10%;
     right: 2.25rem;
   }
 }
