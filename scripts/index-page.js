@@ -22,6 +22,7 @@ function createFeedbackForm(feedback) {
 
     //create input element and add placeholder text
     const inputEl = document.createElement('input');
+    inputEl.classList.add('form-field');
     inputEl.setAttribute('placeholder', 'Enter your name');
 
     //create label and add class, inner text
@@ -31,11 +32,13 @@ function createFeedbackForm(feedback) {
 
     //create textarea element and add placeholder text
     const textareaEl = document.createElement('textarea');
+    textareaEl.classList.add('form-field');
     textareaEl.setAttribute('placeholder', 'Add a new comment');
 
     //create button element and add class
     const btnEl = document.createElement('button');
     btnEl.classList.add('feedback__btn');
+    btnEl.innerText = "COMMENT";
 
     //create image container and add class
     const imgContainer = document.createElement('div');
@@ -43,6 +46,7 @@ function createFeedbackForm(feedback) {
 
     //create image element and add image source
     const photoEl = document.createElement('img');
+    photoEl.classList.add('feedback__photo')
     photoEl.src = "../assets/Images/Mohan-muruge.jpg";
 
     
