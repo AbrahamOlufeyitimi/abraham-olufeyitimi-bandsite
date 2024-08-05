@@ -24,6 +24,7 @@ function createFeedbackForm(feedback) {
     const inputEl = document.createElement('input');
     inputEl.classList.add('form-field');
     inputEl.setAttribute('placeholder', 'Enter your name');
+    inputEl.setAttribute('name', 'fullName');
 
     //create label and add class, inner text
     const labelTwo = document.createElement('label');
@@ -34,11 +35,13 @@ function createFeedbackForm(feedback) {
     const textareaEl = document.createElement('textarea');
     textareaEl.classList.add('form-field');
     textareaEl.setAttribute('placeholder', 'Add a new comment');
+    textareaEl.setAttribute('name', 'comment');
 
     //create button element and add class
     const btnEl = document.createElement('button');
     btnEl.classList.add('feedback__btn');
     btnEl.innerText = "COMMENT";
+    btnEl.setAttribute('type', 'submit');
 
     //create image container and add class
     const imgContainer = document.createElement('div');
@@ -100,16 +103,19 @@ const reviews = [
     {
         fullName: "Victor Pinto",
         comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+        date: "11/02/2023"
     },
     {
         fullName: "Christina Cabrera",
-        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+        date: "10/28/2023"
     },
     {
         fullName: "Isaac Tadesse",
-        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+        date: "10/20/2023"
     }
-]
+];
 
 
 function createReviewCard(review) {
@@ -140,15 +146,29 @@ function createReviewCard(review) {
     feedbackEl.classList.add('review__text');
     feedbackEl.innerText = review.comment;
 
+    //create container for the review date
+    const dateEl = document.createElement('div');
+    dateEl.classList.add('review__date');
+
+    //create span for the review date
+    const dateText = document.createElement('span');
+    dateText.classList.add('review__date-text');
+    dateText.innerText = review.date;
+
+
+    // const sectionEl = document.querySelector('#our-reviews');
 
     //place elements in containers
     cardEl.appendChild(imageEl);
     cardEl.appendChild(textEl);
-
-
+    // sectionEl.appendChild(dateEl);
+    
+    
+    textEl.appendChild(dateEl);
     imageEl.appendChild(pictureEl);
-    textEl.appendChild(nameEl);
+    dateEl.appendChild(nameEl);
     textEl.appendChild(feedbackEl);
+    dateEl.appendChild(dateText);
 
     return cardEl;
 
@@ -169,5 +189,29 @@ function renderReviews() {
         ourReviewsEl.appendChild(card);
     })
 }
+
+
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+    const name = event.target.fullName.value;
+    const reviewComment = event.target.comment.value;
+    const getDate = new Date().toLocaleString();
+
+    const  newData = {
+        fullName: name, 
+        comment: reviewComment,
+        date: getDate
+    };
+
+    // reviews.push(newData);
+    reviews.unshift(newData);
+    renderReviews();
+    event.target.reset();
+}
+
+const formEl = document.getElementById('form-section');
+
+formEl.addEventListener('submit', handleFormSubmit);
 
 renderReviews();

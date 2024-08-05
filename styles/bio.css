@@ -27,107 +27,76 @@ html {
   background-color: #FAFAFA;
 }
 
-@media screen and (min-width: 768px) {
-  .top {
-    background-color: #323232;
-    display: flex;
-    padding-left: 2.25rem;
-    padding-right: 2.5rem;
-  }
-}
-
 .header {
-  background-color: #323232;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.header__logo {
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1.25rem;
-  width: 7.5rem;
-}
-
-.nav {
   background-color: #323232;
-  height: 2rem;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    height: 3.75rem;
+  }
+}
+.header__image {
   display: flex;
-  justify-content: space-evenly;
-  justify-content: space-between;
-  line-height: 1.25rem;
+  padding-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .nav {
+  .header__image {
+    display: flex;
+    flex-direction: row;
     padding-left: 2.25rem;
-    padding-top: 1.25rem;
-    width: 25%;
-    align-items: flex-end;
+    padding-top: 0;
+    padding-right: 2.25rem;
   }
 }
-.nav__anchor1 {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 400;
-  font-size: 0.625rem;
+.header__nav {
+  list-style-type: none;
+  color: #FFFFFF;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    padding-top: 0.3rem;
+  }
+}
+.header__nav-item1 {
   text-align: center;
   width: 50%;
-  color: #E1E1E1;
+  padding-bottom: 1.4rem;
+  padding-top: 0.69rem;
   text-decoration: none;
-}
-@media screen and (min-width: 768px) {
-  .nav__anchor1 {
-    width: auto;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    align-items: center;
-  }
-}
-.nav__anchor1:active {
-  border-bottom: 0.1875rem solid #FFFFFF;
-  color: #FFFFFF;
-  font-weight: 700;
-}
-.nav__anchor1:hover {
-  border-bottom: 0.1875rem solid #FFFFFF;
   color: #FFFFFF;
 }
-@media screen and (min-width: 768px) {
-  .nav__anchor1:hover {
-    margin-bottom: 0.625rem;
-  }
+.header__nav-item1:hover {
+  border-bottom: 0.1875rem solid #FFFFFF;
 }
-.nav__anchor2 {
-  font-family: "AvenirNext LT Pro";
-  font-weight: 400;
-  font-size: 0.625rem;
+.header__nav-item1:active {
+  border-bottom: 0.1875rem solid #FFFFFF;
+  font-weight: bold;
+}
+.header__nav-item2 {
   text-align: center;
   width: 50%;
-  color: #E1E1E1;
+  padding-bottom: 1.4rem;
+  padding-top: 0.69rem;
   text-decoration: none;
-}
-@media screen and (min-width: 768px) {
-  .nav__anchor2 {
-    width: auto;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    align-items: center;
-  }
-}
-.nav__anchor2:active {
-  border-bottom: 0.1875rem solid #FFFFFF;
   color: #FFFFFF;
-  font-weight: 700;
 }
-.nav__anchor2:hover {
+.header__nav-item2:hover {
   border-bottom: 0.1875rem solid #FFFFFF;
-  color: #FFFFFF;
+}
+.header__nav-item2:active {
+  border-bottom: 0.1875rem solid #FFFFFF;
+  font-weight: bold;
 }
 
 .hero {
@@ -334,13 +303,33 @@ html {
 #form-section {
   background-color: #FFFFFF;
 }
-#form-section__title {
+
+.form-section__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   color: #323232;
   margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin-left: 1rem;
+  padding-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .form-section__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 2.25rem;
+    margin-left: 2.25rem;
+    padding-top: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form-section__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 2.25rem;
+    margin-left: 2.25rem;
+    margin-top: 3rem;
+  }
 }
 
 .feedback {
@@ -348,6 +337,18 @@ html {
   flex-direction: row-reverse;
   justify-content: space-between;
   border-bottom: 0.0625rem solid #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .feedback {
+    justify-content: flex-start;
+    margin-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .feedback {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 }
 
 .feedback__block-one {
@@ -396,6 +397,19 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 1.2rem;
+  margin-right: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .feedback__photo {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .feedback__photo {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 .feedback__label {
@@ -417,16 +431,45 @@ html {
   margin-bottom: 1rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .feedback__btn {
+    width: 30%;
+    margin-left: 70%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .feedback__btn {
+    width: 30%;
+    margin-left: 70%;
+  }
+}
 
 #our-reviews {
   padding-bottom: 1rem;
   background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  #our-reviews {
+    padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #our-reviews {
+    padding-bottom: 2.25rem;
+  }
 }
 
 .review__card {
   border-bottom: 0.0625rem solid #E1E1E1;
   display: flex;
   gap: 1rem;
+  margin-left: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .review__card {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 }
 
 .review__text-container {
@@ -456,6 +499,30 @@ html {
      object-fit: cover;
   margin-top: 1.2rem;
   background-color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .review__picture {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .review__picture {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.review__date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review__date-text {
+  color: #E1E1E1;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 .footer {

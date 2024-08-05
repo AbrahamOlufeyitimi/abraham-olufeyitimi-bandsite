@@ -185,11 +185,24 @@ body {
     padding-left: 3rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .shows__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-left: 2.25rem;
+  }
+}
 
 #band-shows {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  #band-shows {
+    margin-left: 35%;
+    margin-right: 5%;
+  }
 }
 
 .show {
@@ -214,7 +227,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .show-div {
+  .show__div {
     display: flex;
     flex-direction: column;
   }
@@ -228,34 +241,39 @@ body {
   }
 }
 
-.label {
+.show__label {
   color: #AFAFAF;
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-weight: 700;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 1280px) {
+  .show__label {
+    padding-bottom: 2.25rem;
+  }
+}
 
 @media screen and (min-width: 768px) {
-  .show:not(:first-of-type) .label {
+  .show:not(:first-of-type) .show__label {
     display: none;
   }
 }
-.scheduled-date {
+.show__date {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 700;
   padding-bottom: 1rem;
 }
 
-.scheduled-venue, .scheduled-location {
+.show__venue, .show__location {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   padding-bottom: 1rem;
 }
 
-.show-button {
+.show__button {
   background-color: #323232;
   color: #FFFFFF;
   height: 2.5rem;
@@ -273,6 +291,11 @@ body {
   background-color: #323232;
   position: relative;
   margin-top: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .footer__content {
+    margin-left: 2.25rem;
+  }
 }
 .footer__block {
   display: flex;
@@ -295,6 +318,11 @@ body {
     justify-content: space-between;
     margin-left: 2.25rem;
     margin-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__block-two {
+    margin-right: 40%;
   }
 }
 .footer__title {

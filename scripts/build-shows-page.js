@@ -7,18 +7,6 @@ const shows = [
     {showDate: 'Wed Dec 18 2024', showVenue: 'Press Club', showLocation: 'San Francisco, CA'}
 ]
 
-/* <p>DATE</p>
-<p>Mon Sept 09 2024</p>
-
-<p>VENUE</p>
-<p>Ronald Lane</p>
-
-<p>LOCATION</p>
-<p>San Francisco, CA</p>
-
-<button>BUY TICKETS</button>
-<hr> */
-
 
 function createShow (show) {
 
@@ -28,47 +16,47 @@ function createShow (show) {
 
     //create parent container div and add class= 'show-div'
     const showContainerOne = document.createElement('div');
-    showContainerOne.classList.add('show-div');
+    showContainerOne.classList.add('show__div');
 
 
     //create label for the date and add class name and also add text 
     const eventDateLabel = document.createElement('p');
-    eventDateLabel.classList.add('label');
+    eventDateLabel.classList.add('show__label');
     eventDateLabel.innerText = 'DATE';
 
     //create HTML tag and add class, text to it
     const eventDate = document.createElement('p');
-    eventDate.classList.add('scheduled-date');
+    eventDate.classList.add('show__date');
     eventDate.innerText = show.showDate;
 
 
     //create parent container div and add class= 'show-div'
     const showContainerTwo = document.createElement('div');
-    showContainerTwo.classList.add('show-div');
+    showContainerTwo.classList.add('show__div');
     
     //create label for the venue and add class name and also add text 
     const eventVenueLabel = document.createElement('p');
-    eventVenueLabel.classList.add('label');
+    eventVenueLabel.classList.add('show__label');
     eventVenueLabel.innerText = 'VENUE';
 
     //create HTML tag and add class, text to it
     const eventVenue = document.createElement('p');
-    eventVenue.classList.add('scheduled-venue');
+    eventVenue.classList.add('show__venue');
     eventVenue.innerText = show.showVenue;
 
 
     //create parent container div and add class= 'show-div'
     const showContainerThree = document.createElement('div');
-    showContainerThree.classList.add('show-div');
+    showContainerThree.classList.add('show__div');
 
     //create label for the location and add class name and also add text 
     const eventLocationLabel = document.createElement('p');
-    eventLocationLabel.classList.add('label');
+    eventLocationLabel.classList.add('show__label');
     eventLocationLabel.innerText = 'LOCATION';
 
     //create HTML tag and add class, text to it
     const eventLocation = document.createElement('p');
-    eventLocation.classList.add('scheduled-location');
+    eventLocation.classList.add('show__location');
     eventLocation.innerText = show.showLocation;
 
 
@@ -78,7 +66,7 @@ function createShow (show) {
 
     //create button and add class name
     const showButton = document.createElement('button');
-    showButton.classList.add('show-button');
+    showButton.classList.add('show__button');
     showButton.innerText = 'BUY TICKETS';
 
     //create button and add class name
