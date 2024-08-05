@@ -92,7 +92,6 @@ function createShow (show) {
 
     showBlock.appendChild(showContainerFour)
     showContainerFour.appendChild(showButton);
-    // showBlock.appendChild(showDivider);
 
     return showBlock
 }
