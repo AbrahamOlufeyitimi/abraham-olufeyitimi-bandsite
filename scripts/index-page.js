@@ -204,7 +204,6 @@ function handleFormSubmit(event) {
         date: getDate
     };
 
-    // reviews.push(newData);
     reviews.unshift(newData);
     renderReviews();
     event.target.reset();
