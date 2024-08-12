@@ -334,6 +334,10 @@ html {
     }
 }
 
+.form-field {
+    resize: none;
+}
+
 .feedback {
     display: flex;
     flex-direction: row-reverse;
@@ -600,6 +604,7 @@ html {
         padding-top: 0;
         padding-left: 1rem;
         padding-bottom: 1rem;
+        width: 12rem;
 
         @include tablet {
             font-size: .875rem;
@@ -619,6 +624,7 @@ html {
 
     &__booking {
         @extend .footer__email;
+        width: 8rem;
 
         @include tablet {
             font-size: .875rem;

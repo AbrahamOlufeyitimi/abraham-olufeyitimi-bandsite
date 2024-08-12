@@ -332,6 +332,10 @@ html {
   }
 }
 
+.form-field {
+  resize: none;
+}
+
 .feedback {
   display: flex;
   flex-direction: row-reverse;
@@ -608,6 +612,7 @@ html {
   padding-top: 0;
   padding-left: 1rem;
   padding-bottom: 1rem;
+  width: 12rem;
 }
 @media screen and (min-width: 768px) {
   .footer__address, .footer__email, .footer__booking {
@@ -623,6 +628,9 @@ html {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+}
+.footer__booking {
+  width: 8rem;
 }
 @media screen and (min-width: 768px) {
   .footer__booking {

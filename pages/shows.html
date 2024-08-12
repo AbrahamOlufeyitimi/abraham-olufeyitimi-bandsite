@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/shows.css">
-    <script src="../scripts/build-shows-page.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/band-site-api.js" defer></script>
+    <script type="module" src="../scripts/build-shows-page.js" defer></script>
     <title>Shows</title>
 
 </head>
@@ -47,7 +49,7 @@
     <footer class="footer">
         <section class="footer__content">
             <div class="footer__block">
-                <h1 class="footer__title">Get in Touch</h1>
+                <h2 class="footer__title">Get in Touch</h2>
                 <section class="footer__images">
                     <a href="https://instagram.com">
                         <img src="../assets/Icons/SVG/Icon-instagram.svg" alt="instagram icon">
@@ -87,7 +89,9 @@
 
 
             <div class="footer__logo-container">
-                <img class="footer__logo" src="../assets/Logo/Logo-bandsite.svg" alt="logo image that say bandsite">
+                <a href="../index.html">
+                    <img class="footer__logo" src="../assets/Logo/Logo-bandsite.svg" alt="logo image that say bandsite">
+                </a>
             </div>
 
             <p class="footer__copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>

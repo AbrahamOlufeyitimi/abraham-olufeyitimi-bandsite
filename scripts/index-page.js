@@ -77,8 +77,6 @@ function renderFeedbackCard() {
     //retrieve #form-section element
     const ourFeedback = document.querySelector('#form-section');
 
-    //clear the current html in #form-section
-    // ourFeedback.innerHTML = "";
 
     const mainForm = createFeedbackForm();
     ourFeedback.appendChild(mainForm);
@@ -156,12 +154,12 @@ function createReviewCard(review) {
     dateText.innerText = review.date;
 
 
-    // const sectionEl = document.querySelector('#our-reviews');
+
 
     //place elements in containers
     cardEl.appendChild(imageEl);
     cardEl.appendChild(textEl);
-    // sectionEl.appendChild(dateEl);
+
     
     
     textEl.appendChild(dateEl);
@@ -204,6 +202,7 @@ function handleFormSubmit(event) {
         date: getDate
     };
 
+
     reviews.unshift(newData);
     renderReviews();
     event.target.reset();
@@ -214,3 +213,4 @@ const formEl = document.getElementById('form-section');
 formEl.addEventListener('submit', handleFormSubmit);
 
 renderReviews();
+
